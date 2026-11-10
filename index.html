@@ -4,13 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Portfólio — Landing Page Factory</title>
-<meta name="description" content="Demonstrações e um cliente real da Landing Page Factory: landing pages com personalidade, uma por segmento, para pequenos negócios locais.">
+<meta name="description" content="Páginas para pequenos negócios locais, uma por segmento. Veja as demonstrações e peça um rascunho com o nome, os serviços e a cidade do seu negócio.">
 <link rel="canonical" href="https://guilhermefava.github.io/portfolio/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:url" content="https://guilhermefava.github.io/portfolio/">
 <meta property="og:title" content="Portfólio — Landing Page Factory">
-<meta property="og:description" content="Demonstrações e um cliente real da Landing Page Factory: landing pages com personalidade, uma por segmento, para pequenos negócios locais.">
+<meta property="og:site_name" content="Landing Page Factory">
+<meta property="og:image" content="https://guilhermefava.github.io/portfolio/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Landing Page Factory: uma página com a cara de cada negócio, com capturas de quatro demonstrações.">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:description" content="Páginas para pequenos negócios locais, uma por segmento. Veja as demonstrações e peça um rascunho com o nome, os serviços e a cidade do seu negócio.">
 <meta name="theme-color" content="#0E3836">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preload" href="assets/fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
@@ -38,26 +44,37 @@ img{display:block;max-width:100%}
 .word{font-family:Bricolage,sans-serif;font-weight:650;font-size:1.05rem}
 .contact{font-size:.92rem;font-weight:600;text-decoration:none;padding:9px 16px;border:1px solid rgba(230,239,235,.28);border-radius:999px;transition:background .2s ease,border-color .2s ease}
 .contact:hover{background:rgba(230,239,235,.08);border-color:rgba(230,239,235,.5)}
-.hero{padding:72px 0 140px;display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:end}
+.hero{padding:72px 0 88px;display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:end}
 .eyebrow{font-family:Bricolage,sans-serif;font-size:.8rem;font-weight:650;letter-spacing:.12em;text-transform:uppercase;color:var(--amber)}
 .hero h1{margin-top:14px;font-size:clamp(2.6rem,5.2vw,4.4rem);line-height:1.02;color:#fff;letter-spacing:-.03em}
 .hero h1 em{font-style:normal;color:var(--amber)}
-.hero p{margin-top:20px;font-size:1.15rem;line-height:1.55;color:var(--on-dark);max-width:34em}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(230,239,235,.22)}
-.stats div{padding:18px 0 0}
-.stats b{display:block;font-family:Bricolage,sans-serif;font-size:2.4rem;line-height:1;font-weight:650;color:#fff;letter-spacing:-.02em}
-.stats span{display:block;margin-top:6px;font-size:.9rem;color:var(--mute-dark)}
+.offer{border-top:1px solid rgba(230,239,235,.22);padding-top:22px}
+.offer p{font-size:1.2rem;line-height:1.5;color:var(--on-dark);max-width:26em}
+.wa{display:inline-flex;align-items:center;gap:10px;margin-top:22px;min-height:52px;padding:0 26px;border-radius:999px;background:var(--amber);color:var(--ink);font-family:Bricolage,sans-serif;font-weight:700;font-size:1.02rem;text-decoration:none;box-shadow:0 14px 28px -14px rgba(0,0,0,.55);transition:transform .35s var(--ease),background .25s ease}
+.wa:hover{transform:translateY(-2px);background:#F2B957}
+.wa:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.wa svg{width:20px;height:20px;fill:currentColor}
+.offer small{display:block;text-wrap:balance;margin-top:12px;font-size:.9rem;color:var(--mute-dark)}
+.offer small a{color:var(--on-dark)}
 
 /* Conteúdo */
-main.wrap{position:relative;margin-top:-88px;padding-bottom:8px}
-.sec{margin-top:72px}
-.sec:first-child{margin-top:0}
-.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:22px}
+main.wrap{padding-bottom:8px}
+.sec{margin-top:80px}
+.sec:first-child{margin-top:64px}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:26px}
 .sec-head h2{font-size:1.6rem;line-height:1.15}
 .sec-head p{font-size:.95rem;color:var(--mute)}
-.sec:first-child .sec-head h2,.sec:first-child .sec-head p{color:#fff}
-.sec:first-child .sec-head p{color:var(--mute-dark)}
 
+/* Como funciona */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;list-style:none;counter-reset:s}
+.step{position:relative;background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:22px 24px 26px;overflow:hidden}
+.step .art{height:132px;margin:-2px -6px 18px;border-radius:12px;background:#E9EFEC;display:grid;place-items:center}
+.step .art svg{width:100%;height:100%}
+.step .n{font-family:Bricolage,sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}
+.step h3{margin-top:4px;font-size:1.25rem;line-height:1.2}
+.step p{margin-top:6px;color:var(--mute);font-size:.98rem}
+
+/* Cartões */
 .card{position:relative;display:flex;flex-direction:column;text-decoration:none;color:inherit;background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:0 1px 0 rgba(14,56,54,.04),0 22px 40px -28px rgba(14,56,54,.45);transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .3s ease}
 .card:hover{transform:translateY(-4px);border-color:#B9C6C1;box-shadow:0 1px 0 rgba(14,56,54,.04),0 30px 50px -28px rgba(14,56,54,.55)}
 .card:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
@@ -70,58 +87,65 @@ main.wrap{position:relative;margin-top:-88px;padding-bottom:8px}
 .go{flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);color:var(--teal);transition:background .3s ease,color .3s ease,border-color .3s ease,transform .45s var(--ease)}
 .go svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .card:hover .go{background:var(--teal);border-color:var(--teal);color:#fff;transform:rotate(45deg)}
-.new{position:absolute;top:14px;left:14px;font-family:Bricolage,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--amber);color:var(--ink);border-radius:999px;padding:5px 12px;box-shadow:0 6px 14px -6px rgba(0,0,0,.35)}
-
-.grid-new{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.grid-new .card h3{font-size:1.55rem}
-.grid-new .body{padding:22px 26px 24px}
+.new{position:absolute;top:14px;left:14px;z-index:1;font-family:Bricolage,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--amber);color:var(--ink);border-radius:999px;padding:5px 12px;box-shadow:0 6px 14px -6px rgba(0,0,0,.35)}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.grid-new + .grid-3{margin-top:24px}
 
-/* Cliente real */
-.feature{display:grid;grid-template-columns:1fr 1.2fr;text-decoration:none;color:inherit;background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:0 22px 40px -28px rgba(14,56,54,.45);transition:transform .45s var(--ease),border-color .3s ease}
-.feature:hover{transform:translateY(-4px);border-color:#B9C6C1}
-.feature:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
-.divare-panel{min-height:240px;background:#F5EBE6;display:flex;align-items:center;justify-content:center}
+/* Prova: cliente real */
+.proof{display:grid;grid-template-columns:1fr 1.25fr;background:var(--white);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:0 22px 40px -28px rgba(14,56,54,.45)}
+.divare-panel{min-height:260px;background:#F5EBE6;display:flex;align-items:center;justify-content:center;text-decoration:none}
 .divare-panel img{width:auto;height:84%;max-height:250px;mix-blend-mode:multiply}
-.fbody{padding:36px 44px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.pbody{padding:36px 44px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
 .badge{font-family:Bricolage,sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:5px 12px;background:var(--amber);color:var(--ink)}
-.feature h3{margin-top:14px;font-size:2rem;line-height:1.1}
-.feature p{margin-top:8px;color:var(--mute);max-width:30em}
-.link{display:inline-flex;align-items:center;gap:6px;margin-top:20px;font-weight:650;color:var(--teal)}
+.pbody h3{margin-top:14px;font-size:2rem;line-height:1.1}
+.pbody>p{margin-top:8px;color:var(--mute);max-width:30em}
+.rating{display:flex;align-items:center;flex-wrap:wrap;gap:6px 14px;margin-top:20px;padding-top:18px;border-top:1px solid var(--line);width:100%}
+.rating b{font-family:Bricolage,sans-serif;font-size:2.4rem;line-height:1;font-weight:650;letter-spacing:-.02em}
+.stars{display:flex;gap:2px;color:var(--amber)}
+.stars svg{width:20px;height:20px;fill:currentColor}
+.rating span{font-size:.98rem;color:var(--mute)}
+.links{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:18px}
+.link{display:inline-flex;align-items:center;gap:6px;font-weight:650;color:var(--teal)}
 .link svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.src{margin-top:14px;font-size:.82rem;color:var(--mute)}
 
-.foot{margin-top:80px;border-top:1px solid var(--line);padding:26px 0 48px;display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between;align-items:baseline;font-size:.92rem;color:var(--mute)}
+/* Chamada final */
+.cta{margin-top:80px;border-radius:var(--r);background:var(--teal-d);color:var(--on-dark);padding:44px 48px;display:flex;align-items:center;justify-content:space-between;gap:24px 40px;flex-wrap:wrap}
+.cta h2{font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.1;color:#fff;max-width:18em}
+.cta .wa{margin-top:0}
+
+.foot{margin-top:48px;border-top:1px solid var(--line);padding:26px 0 48px;display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between;align-items:baseline;font-size:.92rem;color:var(--mute)}
 .foot b{font-family:Bricolage,sans-serif;font-weight:650;color:var(--ink)}
 
-/* Último cartão sozinho na linha: ocupa a linha inteira, na horizontal */
-@media (min-width:1025px){
-  .grid-3 .card:last-child:nth-child(3n+1){grid-column:1/-1;flex-direction:row}
-  .grid-3 .card:last-child:nth-child(3n+1) .shot{flex:0 0 calc((100% - 48px)/3);aspect-ratio:1200/630}
-  .grid-3 .card:last-child:nth-child(3n+1) .body{flex:1;border-top:0;border-left:1px solid var(--line);align-items:center;padding:24px 32px}
-}
 @media (prefers-reduced-motion:reduce){*,*::before{transition:none!important}html{scroll-behavior:auto}}
 @media (max-width:1024px){
   .grid-3{grid-template-columns:1fr 1fr}
-  .hero{grid-template-columns:1fr;gap:36px;padding:56px 0 128px}
+  .hero{grid-template-columns:1fr;gap:32px;padding:56px 0 64px}
+  .steps{grid-template-columns:1fr;gap:18px}
+  .step{display:grid;grid-template-columns:150px 1fr;gap:0 22px;align-items:center;padding:18px 22px}
+  .step .art{grid-row:1/3;margin:0;height:110px}
+  .proof{grid-template-columns:1fr}
+  .divare-panel{aspect-ratio:1200/520;min-height:0}
 }
 @media (max-width:640px){
   .wrap{padding:0 18px}
   .bar{padding-top:22px}
   .contact{display:none}
-  .hero{padding:40px 0 104px}
-  .hero p{font-size:1.02rem}
-  .stats b{font-size:1.9rem}
-  main.wrap{margin-top:-64px}
-  .grid-new,.grid-3{grid-template-columns:1fr;gap:18px}
-  .grid-new .card h3{font-size:1.3rem}
+  .hero{padding:36px 0 44px}
+  .offer p{font-size:1.05rem}
+  .wa{width:100%;justify-content:center}
   .sec{margin-top:56px}
+  .sec:first-child{margin-top:44px}
   .sec-head{flex-direction:column;gap:4px}
   .sec-head h2{font-size:1.35rem}
-  .feature{grid-template-columns:1fr}
-  .divare-panel{aspect-ratio:1200/630;min-height:0}
-  .fbody{padding:22px 22px 26px}
-  .feature h3{font-size:1.5rem}
+  .grid-3{grid-template-columns:1fr;gap:18px}
+  .step{grid-template-columns:96px 1fr;padding:16px}
+  .step .art{height:84px}
+  .step h3{font-size:1.1rem}
+  .step p{font-size:.92rem}
+  .pbody{padding:22px 22px 26px}
+  .pbody h3{font-size:1.5rem}
+  .cta{padding:30px 18px;margin-top:56px}
+  .cta .wa{padding:0 14px;font-size:.95rem;white-space:nowrap}
 }
 </style>
 </head>
@@ -144,12 +168,11 @@ main.wrap{position:relative;margin-top:-88px;padding-bottom:8px}
       <div>
         <p class="eyebrow">Portfólio</p>
         <h1>Uma página com a <em>cara</em> de cada negócio.</h1>
-        <p>Demonstrações feitas para mostrar o nosso padrão por segmento, e um cliente real: o salão Divare Lounge Beauty.</p>
       </div>
-      <div class="stats" aria-label="Resumo do portfólio">
-        <div><b>12</b><span>demonstrações</span></div>
-        <div><b>12</b><span>segmentos</span></div>
-        <div><b>1</b><span>cliente real no ar</span></div>
+      <div class="offer">
+        <p>Uma página com o nome, os serviços e a cidade do seu negócio, já com o botão de WhatsApp na primeira tela.</p>
+        <a class="wa" href="https://wa.me/5551992934734?text=Ol%C3%A1.%20Vi%20o%20portf%C3%B3lio%20da%20Landing%20Page%20Factory.%20Meu%20neg%C3%B3cio%20%C3%A9%20%5Bsegmento%5D%2C%20em%20%5Bcidade%5D.%20Quero%20um%20rascunho%20da%20minha%20p%C3%A1gina." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.9L2 22l5.25-1.38A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.3 15l-.3-.2-3.1.8.83-3-.2-.32A8.1 8.1 0 0 1 12.04 3.8zM8.6 7.6c-.2 0-.5.07-.75.35-.25.28-.97.95-.97 2.3s1 2.7 1.13 2.88c.14.18 1.93 3.07 4.77 4.18 2.36.93 2.84.75 3.35.7.5-.05 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.2-.53-.33-.28-.14-1.65-.82-1.9-.9-.26-.1-.44-.14-.63.14-.18.27-.72.9-.88 1.08-.16.19-.32.2-.6.07-.28-.14-1.18-.44-2.25-1.4-.83-.74-1.4-1.65-1.56-1.93-.16-.28-.02-.43.12-.57.13-.12.28-.32.42-.48.14-.16.18-.28.28-.46.1-.19.05-.35-.02-.5-.07-.13-.63-1.5-.86-2.06-.22-.54-.45-.47-.63-.48z"/></svg>Pedir um rascunho no WhatsApp</a>
+        <small>Conte o segmento e a cidade. Um rascunho por negócio, feito depois do seu ok.</small>
       </div>
     </div>
   </div>
@@ -157,12 +180,24 @@ main.wrap{position:relative;margin-top:-88px;padding-bottom:8px}
 
 <main class="wrap">
 
-  <section class="sec" aria-labelledby="novas">
+  <section class="sec" aria-labelledby="como">
     <div class="sec-head">
-      <h2 id="novas">Mais recentes</h2>
-      <p>As últimas que saíram da fábrica.</p>
+      <h2 id="como">Do rascunho ao ar.</h2>
+      <p>Como funciona, em três passos.</p>
     </div>
-    <div class="grid-new">
+    <ol class="steps">
+      <li class="step"><div class="art"><svg viewBox="0 0 240 132" role="img" aria-label="Página com o nome e o serviço do negócio no topo"><rect x="64" y="10" width="112" height="112" rx="8" fill="#fff" stroke="#B9C6C1"/><rect x="74" y="20" width="60" height="9" rx="4.5" fill="#15262A"/><rect x="74" y="34" width="44" height="5" rx="2.5" fill="#E9A93B"/><rect x="74" y="48" width="92" height="5" rx="2.5" fill="#B9C6C1"/><rect x="74" y="58" width="76" height="5" rx="2.5" fill="#B9C6C1"/><rect x="74" y="74" width="92" height="38" rx="6" fill="#DCE6E2"/><circle cx="90" cy="90" r="7" fill="#E9A93B"/><path d="M76 112l26-18 16 11 14-9 34 16z" fill="#8BA69F" opacity=".55"/></svg></div><div><p class="n">1 · Rascunho</p><h3>Rascunho</h3><p>A gente monta a página com o nome, os serviços e a cidade do seu negócio.</p></div></li>
+      <li class="step"><div class="art"><svg viewBox="0 0 240 132" role="img" aria-label="Página com marcas de revisão e bloco de anotações ao lado"><rect x="26" y="14" width="108" height="104" rx="8" fill="#fff" stroke="#B9C6C1"/><rect x="36" y="24" width="56" height="9" rx="4.5" fill="#15262A"/><rect x="36" y="42" width="84" height="5" rx="2.5" fill="#B9C6C1"/><rect x="36" y="52" width="68" height="5" rx="2.5" fill="#B9C6C1"/><rect x="36" y="72" width="52" height="22" rx="11" fill="#0E3836"/><path d="M34 64c20-6 52-6 76 0" fill="none" stroke="#E9A93B" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 6"/><circle cx="118" cy="30" r="10" fill="#E9A93B"/><path d="M113 31l3.5 3.5 7-8" fill="none" stroke="#15262A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="150" y="20" width="64" height="92" rx="6" fill="#FFF8E6" stroke="#E2CF9C"/><path d="M160 40h44M160 54h44M160 68h30M160 82h40" stroke="#C7B27A" stroke-width="3" stroke-linecap="round"/><g transform="rotate(35 214 40)"><rect x="208" y="8" width="9" height="46" rx="2" fill="#1B5A55"/><path d="M208 54l4.5 9 4.5-9z" fill="#E6D3C8"/></g></svg></div><div><p class="n">2 · Ajustes</p><h3>Ajustes</h3><p>Você lê e diz o que não ficou com a sua cara. A gente mexe no texto e no visual.</p></div></li>
+      <li class="step"><div class="art"><svg viewBox="0 0 240 132" role="img" aria-label="Celular com a página aberta e o botão de WhatsApp na primeira tela"><rect x="86" y="6" width="68" height="120" rx="12" fill="#15262A"/><rect x="91" y="14" width="58" height="104" rx="8" fill="#fff"/><rect x="98" y="24" width="34" height="7" rx="3.5" fill="#15262A"/><rect x="98" y="37" width="44" height="4" rx="2" fill="#B9C6C1"/><rect x="98" y="46" width="36" height="4" rx="2" fill="#B9C6C1"/><rect x="98" y="58" width="44" height="26" rx="5" fill="#DCE6E2"/><rect x="98" y="92" width="44" height="14" rx="7" fill="#E9A93B"/><circle cx="106" cy="99" r="3.2" fill="#15262A"/><circle cx="170" cy="32" r="8" fill="#2F9E6B"/><path d="M166 32l3 3 5-6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><p class="n">3 · No ar</p><h3>No ar</h3><p>Aprovado, a página entra no ar no endereço do seu negócio.</p></div></li>
+    </ol>
+  </section>
+
+  <section class="sec" aria-labelledby="demos">
+    <div class="sec-head">
+      <h2 id="demos">12 demonstrações, uma por segmento</h2>
+      <p>Cada uma com identidade própria. Toque para abrir.</p>
+    </div>
+    <div class="grid-3">
       <a class="card" href="odonto/">
         <span class="new">Nova</span>
         <div class="shot"><img class="thumb" src="odonto/og.jpg" alt="Captura da página inicial da demonstração Marfim" width="1200" height="630"></div>
@@ -173,10 +208,8 @@ main.wrap{position:relative;margin-top:-88px;padding-bottom:8px}
         <div class="shot"><img class="thumb" src="harmonizacao/og.jpg" alt="Captura da página inicial da demonstração Contorno" width="1200" height="630"></div>
         <div class="body"><div><p class="seg">Harmonização facial</p><h3>Contorno</h3></div><span class="go" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg></span></div>
       </a>
-    </div>
-    <div class="grid-3">
       <a class="card" href="barbearia/">
-        <div class="shot"><img class="thumb" src="assets/cards/barbearia.jpg" alt="Captura da página inicial da demonstração Latão Barbearia" width="1200" height="630" loading="lazy"></div>
+        <div class="shot"><img class="thumb" src="assets/cards/barbearia.jpg" alt="Captura da página inicial da demonstração Latão Barbearia" width="1200" height="630"></div>
         <div class="body"><div><p class="seg">Barbearia</p><h3>Latão Barbearia</h3></div><span class="go" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg></span></div>
       </a>
       <a class="card" href="pet/">
@@ -187,31 +220,14 @@ main.wrap{position:relative;margin-top:-88px;padding-bottom:8px}
         <div class="shot"><img class="thumb" src="assets/cards/academia.jpg" alt="Captura da página inicial da demonstração Anilha Treino &amp; Cross" width="1200" height="630" loading="lazy"></div>
         <div class="body"><div><p class="seg">Academia</p><h3>Anilha Treino &amp; Cross</h3></div><span class="go" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg></span></div>
       </a>
-    </div>
-  </section>
-
-  <section class="sec" aria-labelledby="real">
-    <div class="sec-head">
-      <h2 id="real">Cliente real</h2>
-      <p>Feito por nós e em uso pelo salão.</p>
-    </div>
-    <a class="feature" href="https://divareloungebeauty.com.br/" target="_blank" rel="noopener">
-      <div class="divare-panel"><img src="assets/divare-logo.jpg" alt="Logo do Divare Lounge Beauty" width="540" height="445" loading="lazy"></div>
-      <div class="fbody">
-        <span class="badge">Cliente real</span>
-        <h3>Divare Lounge Beauty</h3>
-        <p>Estética. Site no ar, com domínio próprio.</p>
-        <span class="link">divareloungebeauty.com.br <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg></span>
-      </div>
-    </a>
-  </section>
-
-  <section class="sec" aria-labelledby="todas">
-    <div class="sec-head">
-      <h2 id="todas">Outras demonstrações</h2>
-      <p>Uma por segmento.</p>
-    </div>
-    <div class="grid-3">
+      <a class="card" href="fitness/">
+        <div class="shot"><img class="thumb" src="assets/cards/fitness.jpg" alt="Captura da página inicial da demonstração Estúdio Lastro" width="1200" height="630" loading="lazy"></div>
+        <div class="body"><div><p class="seg">Fitness</p><h3>Estúdio Lastro</h3></div><span class="go" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg></span></div>
+      </a>
+      <a class="card" href="pilates-clinico/">
+        <div class="shot"><img class="thumb" src="assets/cards/pilates-clinico.jpg" alt="Captura da página inicial da demonstração Medida, pilates clínico" width="1200" height="630" loading="lazy"></div>
+        <div class="body"><div><p class="seg">Fisioterapia e pilates clínico</p><h3>Medida</h3></div><span class="go" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg></span></div>
+      </a>
       <a class="card" href="arquitetura/">
         <div class="shot"><img class="thumb" src="assets/cards/arquitetura.jpg" alt="Captura da página inicial da demonstração Ateliê Dobra" width="1200" height="630" loading="lazy"></div>
         <div class="body"><div><p class="seg">Arquitetura e interiores</p><h3>Ateliê Dobra</h3></div><span class="go" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg></span></div>
@@ -228,19 +244,41 @@ main.wrap{position:relative;margin-top:-88px;padding-bottom:8px}
         <div class="shot"><img class="thumb" src="assets/cards/advocacia.jpg" alt="Captura da página inicial da demonstração Banca do Sinos Advogados" width="1200" height="630" loading="lazy"></div>
         <div class="body"><div><p class="seg">Advocacia</p><h3>Banca do Sinos Advogados</h3></div><span class="go" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg></span></div>
       </a>
-      <a class="card" href="pilates-clinico/">
-        <div class="shot"><img class="thumb" src="assets/cards/pilates-clinico.jpg" alt="Captura da página inicial da demonstração Estúdio Lastro, pilates clínico" width="1200" height="630" loading="lazy"></div>
-        <div class="body"><div><p class="seg">Fisioterapia e pilates clínico</p><h3>Estúdio Lastro</h3></div><span class="go" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg></span></div>
-      </a>
-      <a class="card" href="fitness/">
-        <div class="shot"><img class="thumb" src="assets/cards/fitness.jpg" alt="Captura da página inicial da demonstração Estúdio Lastro" width="1200" height="630" loading="lazy"></div>
-        <div class="body"><div><p class="seg">Fitness</p><h3>Estúdio Lastro</h3></div><span class="go" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg></span></div>
-      </a>
       <a class="card" href="clinica/">
         <div class="shot"><img class="thumb" src="assets/cards/clinica.jpg" alt="Captura da página inicial da demonstração Clínica Derma Alva" width="1200" height="630" loading="lazy"></div>
         <div class="body"><div><p class="seg">Clínica médica</p><h3>Clínica Derma Alva</h3></div><span class="go" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg></span></div>
       </a>
     </div>
+  </section>
+
+  <section class="sec" aria-labelledby="real">
+    <div class="sec-head">
+      <h2 id="real">Cliente real</h2>
+      <p>Feito por nós e em uso pelo salão.</p>
+    </div>
+    <div class="proof">
+      <a class="divare-panel" href="https://divareloungebeauty.com.br/" target="_blank" rel="noopener" aria-label="Abrir o site do Divare Lounge Beauty"><img src="assets/divare-logo.jpg" alt="Logo do Divare Lounge Beauty" width="540" height="445" loading="lazy"></a>
+      <div class="pbody">
+        <span class="badge">Cliente real</span>
+        <h3>Divare Lounge Beauty</h3>
+        <p>Estética. Site no ar, com domínio próprio.</p>
+        <div class="rating">
+          <b>4,9</b>
+          <span class="stars" role="img" aria-label="4,9 de 5 estrelas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.5l-5.9 3.3 1.2-6.6L2.5 9.6l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.5l-5.9 3.3 1.2-6.6L2.5 9.6l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.5l-5.9 3.3 1.2-6.6L2.5 9.6l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.5l-5.9 3.3 1.2-6.6L2.5 9.6l6.6-.9z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.5l-5.9 3.3 1.2-6.6L2.5 9.6l6.6-.9z"/></svg></span>
+          <span>63 avaliações no Google</span>
+        </div>
+        <div class="links">
+          <a class="link" href="https://divareloungebeauty.com.br/" target="_blank" rel="noopener">divareloungebeauty.com.br <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg></a>
+          <a class="link" href="https://www.google.com/maps/place/Divare+Lounge+Beauty+Ecoville/@-30.0026068,-51.1236084,17z/data=!4m8!3m7!1s0x9519774faed2a16b:0xc4e3127c4bc4739d!8m2!3d-30.0026068!4d-51.1236084!9m1!1b1!16s%2Fg%2F11j3whxywm" target="_blank" rel="noopener">Ver as avaliações no Google <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg></a>
+        </div>
+        <p class="src">Nota e número de avaliações como aparecem no site do Divare em 10/11/2026.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" aria-labelledby="fale">
+    <h2 id="fale">Quer uma página com a cara do seu negócio?</h2>
+    <a class="wa" href="https://wa.me/5551992934734?text=Ol%C3%A1.%20Vi%20o%20portf%C3%B3lio%20da%20Landing%20Page%20Factory.%20Meu%20neg%C3%B3cio%20%C3%A9%20%5Bsegmento%5D%2C%20em%20%5Bcidade%5D.%20Quero%20um%20rascunho%20da%20minha%20p%C3%A1gina." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.9L2 22l5.25-1.38A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.3 15l-.3-.2-3.1.8.83-3-.2-.32A8.1 8.1 0 0 1 12.04 3.8zM8.6 7.6c-.2 0-.5.07-.75.35-.25.28-.97.95-.97 2.3s1 2.7 1.13 2.88c.14.18 1.93 3.07 4.77 4.18 2.36.93 2.84.75 3.35.7.5-.05 1.65-.67 1.88-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.2-.53-.33-.28-.14-1.65-.82-1.9-.9-.26-.1-.44-.14-.63.14-.18.27-.72.9-.88 1.08-.16.19-.32.2-.6.07-.28-.14-1.18-.44-2.25-1.4-.83-.74-1.4-1.65-1.56-1.93-.16-.28-.02-.43.12-.57.13-.12.28-.32.42-.48.14-.16.18-.28.28-.46.1-.19.05-.35-.02-.5-.07-.13-.63-1.5-.86-2.06-.22-.54-.45-.47-.63-.48z"/></svg>Pedir um rascunho no WhatsApp</a>
   </section>
 
   <footer class="foot">
